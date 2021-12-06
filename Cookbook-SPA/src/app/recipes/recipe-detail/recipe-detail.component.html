@@ -1,0 +1,25 @@
+<div *ngIf="recipe && ingredientsData">
+<h3>Recipe Details</h3>
+
+
+<form [formGroup]="recipeNameForm" (ngSubmit)="UpdateRecipeName()">
+    <input
+        type="text"
+        id="recipeName"
+        formControlName="recipeName"
+        class="form-control">
+    <button>Update Recipe Name</button>
+</form>
+
+
+<form [formGroup]="ingredientsListForm" (ngSubmit)="submit()">
+    <!-- <label formArrayName="ingredients" *ngFor="let ingredient of ingredientsFormArray.controls; let i = index"> -->
+        <!-- <input type="checkbox" [formControlName]="i"> -->
+        <!-- {{ingredientsData[i].name}} -->
+      <!-- </label> -->
+    <button>save ingredients</button>
+</form>
+
+
+
+</div>
